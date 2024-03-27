@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<img class="position-fixed h-100 w-100" src="https://www.e-solat.gov.my/portalassets/images/background/imejlatar1.jpg" />
+		<div class="container text-white">
+			<div class="wrapper position-relative bg-dark bg-opacity-50 p-5 m-5 rounded-3">
+				<div class="container-fluid">
+					<div class="row ">
+						<div class="col-sm">
+							<div id="countdown" class="d-flex flex-column text-center align-items-center">
+								<div class="d-flex flex-column">
+									<h3 name="time-name" class="text-capitalize"></h3>
+									<h3 name="time" class="text-uppercase"></h3>
+								</div>
+								<div class="row align-items-center">
+									<div class="col-sm">
+										<div class="timer rounded-circle">
+											<div class="d-flex flex-column">
+												<span name="hours" class="fs-1 fw-bold"></span>
+												<span class="fs-5 fw-bold">Hours</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm">
+										<div class="timer rounded-circle">
+											<div class="d-flex flex-column">
+												<span name="minutes" class="fs-1 fw-bold"></span>
+												<span class="fs-5 fw-bold">Minutes</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm">
+										<div class="timer rounded-circle">
+											<div class="d-flex flex-column">
+												<span name="seconds" class="fs-1 fw-bold"></span>
+												<span class="fs-5 fw-bold">Seconds</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="text-highlight">Until the next prayer time in the zone</p>
+								<h3 name="zone" class="fs-5"></h3>
+							</div>
+							<p class="fw-bold hidden text-center">Next prayer will be available tomorrow</p>
+						</div>
+					</div>
+					<div class="row mt-5 pt-5 border-top">
+						<div class="col-sm">
+							<div class="d-flex justify-content-center gap mb-4">
+								<div class="icon bg-white rounded-circle">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101">
+										<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z"></path>
+									</svg>
+								</div>
+								<div class="d-flex flex-column">
+									<h2>Subscribers</h2>
+									<select name="subscribers"></select>
+								</div>
+							</div>
+							<div class="col-sm pb-3 text-center">
+								<div id="subscription" class="row pb-3 mb-3">
+									<div class="col-sm">
+										<div class="d-flex flex-column">
+											<h3 name="music-box-name"></h3>
+											<div id="zone-schedule" class="d-flex flex-column">
+												<h5 name="zone"></h5>
+												<div class="container">
+													<div class="row">
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">IMSAK</span>
+																<span name="imsak"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">SUBUH</span>
+																<span name="fajr"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">SYURUK</span>
+																<span name="syuruk"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">ZOHOR</span>
+																<span name="dhuhr"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">ASAR</span>
+																<span name="asr"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">MAGHRIB</span>
+																<span name="maghrib"></span>
+															</div>
+														</div>
+														<div class="col-sm">
+															<div class="d-flex flex-column">
+																<span class="text-highlight fw-bold">ISYAK</span>
+																<span name="isha"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">loadSettings()</script>
+	</body>
+</html>
